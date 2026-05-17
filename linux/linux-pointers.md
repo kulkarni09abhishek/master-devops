@@ -12,7 +12,7 @@
 
 ## Linux Architecture
 
-![Alt Text](image.png)
+![Alt Text](images/image.png)
 
 **What happens when system boots?**
 ```text
@@ -110,7 +110,7 @@ Common Linux Ports -
 | 6443 | TCP      | Kubernetes API Server |
 
 
-![alt text](image-1.png)
+![Alt Text](images/image-1.png)
 
 So when data reaches a server, the port number tells Linux which application should receive it.
 
@@ -177,8 +177,8 @@ sudo passwd username
 > Task - Create user1 and user2 using useradd and adduser command each. Ensure users are added in the system. Check the differences in defaults between user created using useradd vs adduser. Change/set the password for one of the user. 
 
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![Alt Text](images/image-2.png)
+![Alt Text](images/image-3.png)
 
 **Fields:**
 
@@ -218,8 +218,9 @@ usermod -aG <group_name> <username>   # add user to a group
 usermod -aG <comma-separated-grou-names>  # add user to list of groups
 cat /etc/group  # list all groups
 ```
-- Let's create a new group g2 and make user2 part of g2
-![alt text](image-4.png)
+- Let's create a new group g2 and make user2 part of g2  
+
+![Alt Text](images/image-4.png)
 
 - `-aG` is used to append the new group. User is part of some group(s) and we want it to be a part of one more group. If we use `-g`, it will change primary group of the user. In above example, primary group for user2 is user2.
 
@@ -233,7 +234,7 @@ gpasswd -d user2 g2
 ```bash
 passwd -e user1
 ```
-![alt text](image-6.png)
+![Alt Text](images/image-6.png)
 
 - Lock and unlock user:
 ```bash
@@ -1212,19 +1213,19 @@ Solution -
 ```bash
 lsblk
 ```
-![alt text](image-7.png)
+![Alt Text](images/image-7.png)
 
 2) Create Partitions
 ```bash
 fdisk /dev/xvdbb
 ```
-![alt text](image-8.png)
+![Alt Text](images/image-8.png)
 
 3) Now check the partition 
 ```bash
 lsblk
 ```
-![alt text](image-9.png)
+![Alt Text](images/image-9.png)
 
 4) Create Filesystems
 ```bash
@@ -1232,7 +1233,7 @@ sudo mkfs.ext4 /dev/xvdbb1
 sudo mkfs.ext4 /dev/xvdbb2
 sudo mkfs.ext4 /dev/xvdbb3
 ```
-![alt text](image-10.png)
+![Alt Text](images/image-10.png)
 
 5) Create Mount Directories
 ```bash
@@ -1248,8 +1249,9 @@ sudo mount /dev/xvdbb2 /mnt/data2
 sudo mount /dev/xvdbb3 /mnt/data3
 ```
 
-7) Verify mounts 
-![alt text](image-11.png)
+7) Verify mounts   
+
+![Alt Text](images/image-11.png)
 
 8) Permanent Mount 
 ```bash
@@ -1263,7 +1265,7 @@ UUID=<uuid1> /data1 ext4 defaults 0 0
 UUID=<uuid2> /data2 ext4 defaults 0 0
 UUID=<uuid3> /data3 ext4 defaults 0 0
 ```
-![alt text](image-12.png)
+![Alt Text](images/image-12.png)
 
 
 ## Hard Link vs Soft Link
@@ -1438,6 +1440,39 @@ API_KEY=secretvalue
 ```
 username:x:UID:GID:comment:home_directory:shell
 ```
+
+
+# vim Editor shortcuts
+
+| Shortcut / Command | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| `o`                | Open new line below cursor               |
+| `O`                | Open new line above cursor               |
+| `0`                | Move to beginning of line                |
+| `$`                | Move to end of line                      |
+| `gg`               | Go to top of file                        |
+| `:10`              | Go to line 10                            |
+| `yy`               | Copy (yank) current line                 |
+| `p`                | Paste below cursor                       |
+| `P`                | Paste above cursor                       |
+| `5dd`              | Delete 5 lines                           |
+| `x`                | Delete character under cursor            |
+| `D`                | Delete from cursor to end of line        |
+| `u`                | Undo last change                         |
+| `Ctrl + r`         | Redo undone change                       |
+| `/word`            | Search forward for “word”                |
+| `?word`            | Search backward for “word”               |
+| `n`                | Go to next search match                  |
+| `N`                | Go to previous search match              |
+| `:s/old/new/`      | Replace first occurrence in current line |
+| `:%s/old/new/g`    | Replace all occurrences in file          |
+| `:%s/old/new/gc`   | Replace all with confirmation            |
+| `:set number`      | Show line numbers                        |
+| `:set nonumber`    | Hide line numbers                        |
+| `:noh`             | Remove search highlighting               |
+| `ggVG`             | Select entire file                       |
+
+
 
 ## Practice Shell Script Questions
 
