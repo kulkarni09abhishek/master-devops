@@ -1,0 +1,7 @@
+
+
+Projects -
+1) Website monitoring shell script.
+2) Locally deployed java,nodejs,dotnet and python 2 tier applications to understand how those work in production.
+3) Locally deployed java-mysql, nodejs-mysql, dotnet-mongodb, python-postgres 3-tier appliations to understand how those work in production.
+4) Manually deploy war file to tomcat.
